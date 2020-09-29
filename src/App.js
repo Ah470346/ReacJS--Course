@@ -6,11 +6,9 @@ import TodoItem from './components/TodoItem';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <TodoItem/>
-        <TodoItem/>
-        <TodoItem/>
-      </header>
+      <TodoItem title="Mua Bim Bim"/>
+      <TodoItem title="Di Da Bong"/>
+      <TodoItem title="Di Do Xang"/>
     </div>
   );
 }
