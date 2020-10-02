@@ -1,38 +1,117 @@
+
 .App {
-  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #4d4d4d;
+  position: relative;
+  width: 580px;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #bebebe;
+  box-shadow: 0px 0px 2px #aaa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App::before {
+  content: '';
+  position: absolute;
+  width: calc(100% - 10px);
+  bottom: -6px;
+  left: 5px;
+  height: 5px;
+  border: 1px solid #bebebe;
+  border-top: none;
+  box-shadow: 0px 1px 2px #ddd;
+}
+.App::after {
+  content: '';
+  position: absolute;
+  width: calc(100% - 20px);
+  bottom: -11px;
+  left: 10px;
+  height: 5px;
+  border: 1px solid #bebebe;
+  border-top: none;
+  box-shadow: 0px 1px 2px #ddd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .header {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.App .header img {
+  margin-left: 20px;
+  opacity: 0.2;
+}
+
+.App .header .tick {
+  opacity: 1;
+}
+
+.App .header input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  width: 100%;
+  color: #4d4d4d;
+  border: none;
+  outline: none;
+  padding-left: 16px;
+  line-height: 2.5;
+}
+
+.App .header input::placeholder {
+  color: #ddd;
+  font-style: italic;
+}
+
+.App .nav {
+  position: relative;
+  display: flex;
+  font-size: 15px;
+  width: 100%;
+  height: 50px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App .nav a {
+  text-decoration: none;
+  color:  #777;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .nav .wrap-nav > a {
+  margin-right: 15px;
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 3px; 
+}
+
+.App .nav .wrap-nav .border {
+  border: 1px solid #fff;
+}
+
+.App .nav .wrap-nav .border-active {
+  border: 1px solid #aaa;
+}
+
+.App .nav .wrap-nav .border:hover{
+  border: 1px solid rgb(236, 236, 236);
+}
+
+.App .nav > a {
+  display: block;
+  position: absolute;
+  right: 15px;
+}
+
+/* .App .nav .wrap-nav > a:last-child {
+  margin-right: 20px;
+} */
+
+.App .nav > a:hover {
+  text-decoration: underline;
 }
